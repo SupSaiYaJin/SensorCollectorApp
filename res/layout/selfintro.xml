@@ -1,0 +1,56 @@
+<RelativeLayout    
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="fill_parent" 
+    android:layout_width="fill_parent"
+    android:background="@drawable/techback">
+       
+    <LinearLayout 
+        android:id="@+id/selfbutton"
+        android:layout_alignParentBottom="true" 
+        android:layout_height="wrap_content" 
+        android:layout_width="fill_parent" 
+        android:orientation="horizontal">
+        
+     <Button
+        android:id="@+id/callauthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/callauthor"
+        android:textStyle="bold"
+        android:layout_weight="1"
+        style="?android:attr/buttonBarButtonStyle"/>
+     <Button
+        android:id="@+id/realimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/awesome"
+        android:textStyle="bold"
+        android:layout_weight="1"
+        style="?android:attr/buttonBarButtonStyle"/>
+     <Button
+        android:id="@+id/watchimage"
+        android:text="@string/watchimage" 
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        style="?android:attr/buttonBarButtonStyle"/> 
+        
+    </LinearLayout>
+    
+    <ScrollView
+    android:layout_width="fill_parent"  
+    android:layout_height="wrap_content" 
+    android:scrollbars="vertical"
+    android:layout_above="@id/selfbutton">
+     
+     <TextView
+        android:id="@+id/selftext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/selfintroduction"
+        android:textSize="22sp" />         
+    </ScrollView>
+     
+</RelativeLayout>

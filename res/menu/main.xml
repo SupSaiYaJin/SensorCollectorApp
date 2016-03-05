@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/selfintro"
+        android:showAsAction="never"
+        android:title="@string/selfintro"/>
+    <item
+        android:id="@+id/phoneto"
+        android:showAsAction="never"
+        android:title="@string/phoneto"/>
+    <item
+        android:id="@+id/cleardb"
+        android:showAsAction="never"
+        android:title="@string/cleardb"/>
+
+</menu>

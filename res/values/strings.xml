@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="intro">简介</string>
+    <string name="info">信息</string>
+    <string name="sensor">传感器</string>
+    <string name="app_name">传感器数据采集器</string>
+    <string name="selfintro">作者简介 </string>
+    <string name="phoneto">打电话给作者</string>
+    <string name="callauthor">联系作者 </string>
+    <string name="awesome">称赞作者 </string>
+    <string name="watchimage">偷看写真</string>
+    <string name="maintext">\t\t\t传感器（英文名称：transducer/sensor）是一种检测装置，能感受到被测量的信息，并能将感受到的信息，按一定规律变换成为电信号或其他所需形式的信息输出，以满足信息的传输、处理、存储、显示、记录和控制等要求。它是实现自动检测和自动控制的首要环节。\n</string>
+    <string name="niubi">点击传感器选项卡开始旅程。</string>
+    <string name="bottom">点击信息选项卡了解你的手机。</string>
+    <string name="scan">单次</string>
+    <string name="write">是否存储</string>
+    <string name="conswrite">连续</string>
+    <string name="conscan">连续扫描</string>
+    <string name="openwifi">打开WiFi</string>
+    <string name="clear">计数清零</string>
+    <string name="setinter">选择存储间隔</string>
+    <string name="selfintroduction">\t\t\t谢然，北京人，人称赛神。赛神是所有人的赛神，如果方sir会打dota的话一定也会叫他赛神。赛神自己说，全靠大菊观。\n
+\t\t\t赛神酷爱打球，打赌也是：我输了就把球吃了！指球抬头瞪眼，一气呵成。每次我都看看球，看看他的嘴，心想，**。赛神的偶像是库里，外号萌神。萌就萌在光头和深邃的蓝眼睛，赛神一头卷发，带眼镜还单眼皮，所以只能在球技上模仿。\n
+\t\t\t赛神刚开始是走偶像路线的，大一烫了头，与妹子组合参加歌手大赛，无奈一轮游，留下不愿提起的组合名，大**小**。两年后，赛神卷土重来，改为幕后创作，一人改编所有参赛歌曲。结果不错，可赛神还是默默无闻，集齐七个队友，也没召唤出女朋友。单身至今。\n
+\t\t\t赛神又称然骚，原因是确实很骚。赛神把苹果的标志贴在自己lenovo的本上，趁伟哥投篮起跳伸手盖帽，第一次做app就写了张德胜自传。\n
+\t\t\t赛神很萌的，你们不要黑他。</string>
+    <string name="monitor">传感器监视</string>
+    <string name="accelerometer">加速度传感器</string>
+    <string name="orient">方向传感器</string>
+    <string name="magnetic">磁场传感器</string>
+    <string name="temperature">温度传感器</string>
+    <string name="light">光传感器</string>
+    <string name="gyroscope">陀螺仪传感器</string>
+    <string name="pressure">气压传感器</string>
+    <string name="proximity">距离传感器</string>
+    <string name="wifi">WiFi信号检测</string>
+    <string name="gravity">重力传感器</string>
+    <string name="lineara">线性加速度传感器</string>
+    <string name="rotation">旋转矢量传感器</string>
+    <string name="compass">罗盘</string>
+    <string name="senddata">发送扫描结果</string>
+    <string name="multiscan">多重扫描</string>
+    <string name="start">开始扫描</string>
+    <string name="stop">停止扫描</string>
+    <string name="plzinput">请输入扫描间隔（毫秒）：</string>
+    <string name="cleardb">清空数据库</string>
+    <string name="setaccuracy">选择精确度</string>
+    <string name="title_activity_monitor">传感器监视</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="wifi_not_open">WiFi未打开，请打开WiFi以检测</string>
+    <string name="wifi_opened">WiFi已打开，点击按钮开始检测</string>
+
+</resources>

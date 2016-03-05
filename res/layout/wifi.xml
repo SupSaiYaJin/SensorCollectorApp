@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/techearth"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:text="@string/wifi"
+        android:textSize="26sp" />
+    
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <Button
+        android:id="@+id/scan"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/scan"
+        android:textColor="#0A3F8F"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_weight="1"/>
+    <Button
+        android:id="@+id/write"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/write"
+        android:textColor="#0A3F8F"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_weight="1"/>
+    <Button
+        android:id="@+id/openwifi"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/openwifi"
+        android:textColor="#0A3F8F"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_weight="1"/>
+    <Button
+        android:id="@+id/conscan"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/conscan"
+        android:textColor="#0A3F8F"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_weight="1"/>
+</LinearLayout>
+
+  
+    
+<ScrollView
+    android:id="@+id/wifilist"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical">
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView 
+        android:id="@+id/iswrite"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#CD2626"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/wifi1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#CD2626"
+        android:textSize="20sp" />
+</LinearLayout>
+</ScrollView>
+
+</LinearLayout>

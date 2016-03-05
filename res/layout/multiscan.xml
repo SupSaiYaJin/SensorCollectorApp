@@ -1,0 +1,123 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/techearth"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:text="@string/multiscan"
+        android:textSize="26sp" />
+
+    <CheckBox
+        android:id="@+id/chkacc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/accelerometer" />
+
+    <CheckBox
+        android:id="@+id/chkmag"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/magnetic" />
+
+    <CheckBox
+        android:id="@+id/chkori"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/orient" />
+
+    <CheckBox
+        android:id="@+id/chkgyr"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/gyroscope" />
+
+    <CheckBox
+        android:id="@+id/chkgra"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/gravity" />
+
+    <CheckBox
+        android:id="@+id/chklin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lineara" />
+
+    <CheckBox
+        android:id="@+id/chkrot"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/rotation" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/plzinput" />
+
+        <EditText
+            android:id="@+id/setinterval"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/start"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/start"
+            android:textColor="#0A3F8F"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+
+        <Button
+            android:id="@+id/clearcount"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/clear"
+            android:textColor="#0A3F8F"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/stop"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/stop"
+            android:textColor="#0A3F8F"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:textSize="20sp"
+        android:textColor="#CD2626"/>
+
+</LinearLayout>

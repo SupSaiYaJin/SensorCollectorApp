@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sensors">
+        <item>加速度传感器</item>
+        <item>方向传感器</item>
+        <item>磁场传感器</item>
+        <item>温度传感器</item>
+        <item>光线传感器</item>
+        <item>陀螺仪传感器</item>
+        <item>气压传感器</item>
+        <item>距离传感器</item>
+        <item>WiFi信号检测</item>
+        <item>重力传感器</item>
+        <item>线性加速度传感器</item>
+        <item>旋转矢量传感器</item>
+        <item>多重扫描</item>
+    </string-array>
+</resources>
