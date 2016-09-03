@@ -59,7 +59,7 @@ public class BottomTabView extends View {
         if (drawable != null) {
             mIconBitmap = drawable.getBitmap();
         }
-        mColor = attributes.getColor(R.styleable.BottomTabView_color, 0xff45C01A);
+        mColor = attributes.getColor(R.styleable.BottomTabView_color, context.getResources().getColor(R.color.colorPrimaryDark));
         mText = attributes.getString(R.styleable.BottomTabView_text);
         mTextSize = (int) attributes.getDimension(R.styleable.BottomTabView_text_size, mTextSize);
 

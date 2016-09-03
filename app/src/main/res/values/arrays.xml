@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="sensors">
+    <string-array name="sensors_array">
         <item>加速度传感器</item>
         <item>方向传感器</item>
-        <item>磁场传感器</item>
+        <item>终端坐标磁场传感器</item>
+        <item>大地坐标磁场传感器</item>
         <item>温度传感器</item>
         <item>光线传感器</item>
         <item>陀螺仪传感器</item>

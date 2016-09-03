@@ -1,5 +1,9 @@
 package com.saiyajin.sensor.activities;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -8,21 +12,15 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.app.ActionBar;
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.graphics.drawable.Drawable;
 
 import com.saiyajin.sensor.R;
 
-public class SelfIntroActivity extends Activity {
+public class SelfIntroActivity extends AbsActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.selfintro);
+        setContentView(R.layout.selfintro_activity);
         Button callAuthor = (Button) findViewById(R.id.callauthor);
         callAuthor.setOnClickListener(new Listener1());
         Button watchImage = (Button) findViewById(R.id.watchimage);

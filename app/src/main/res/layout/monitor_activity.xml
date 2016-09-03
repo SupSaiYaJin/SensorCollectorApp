@@ -1,12 +1,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/monitorlayout"
+    android:id="@+id/monitor_layout"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@drawable/techearth">
     
     <TextView
+        android:id="@+id/txt_title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/monitor"
@@ -17,14 +17,14 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/monitorsave"
+        android:id="@+id/txt_monitor_save"
         android:textSize="20sp"
         android:textColor="#CD2626"/>
          
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/monitorview"
+        android:id="@+id/txt_monitor_view"
         android:textSize="20sp"
         android:textColor="#CD2626"/>
     

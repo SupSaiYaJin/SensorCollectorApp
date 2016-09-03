@@ -1,12 +1,8 @@
 package com.saiyajin.sensor.listener;
 
-import android.app.Activity;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
-import android.widget.TextView;
-
-import com.saiyajin.sensor.R;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -15,16 +11,17 @@ public class SensorMonitor implements SensorEventListener {
     public final static int NEWORIENTATION = 10000;
     public final static int FIXEDMAGNETIC = 10001;
 
-    protected String[] description;
-    protected int SensorInt;
-    protected TextView textView;
-    protected float[] values;
+    public interface SensorChangedListener {
+        void onSensorChanged(float[] values);
+    }
 
-    SensorMonitor(int SensorInt, String[] description, Activity activity) {
-        this.SensorInt = SensorInt;
-        this.description = description;
-        textView = (TextView) activity.findViewById(R.id.monitorview);
-        values = new float[description.length];
+    private int mSensorInt;
+    float[] mValues;
+    SensorChangedListener mListener;
+
+    public SensorMonitor(int sensorInt, SensorChangedListener listener) {
+        mSensorInt = sensorInt;
+        mListener = listener;
     }
 
     @Override
@@ -33,29 +30,20 @@ public class SensorMonitor implements SensorEventListener {
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        if (event.sensor.getType() == SensorInt) {
-            for (int i = 0; i < values.length; ++i)
-                values[i] = event.values[i];
-            show();
+        if (event.sensor.getType() == mSensorInt) {
+            mValues = event.values;
+            if (mListener != null) {
+                mListener.onSensorChanged(mValues);
+            }
         }
-    }
-
-    public void show() {
-        StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < description.length; ++i) {
-            stringBuilder.append(description[i]);
-            stringBuilder.append(values[i]);
-            stringBuilder.append('\n');
-        }
-        textView.setText(stringBuilder.toString());
     }
 
     public int getSensorInt() {
-        return SensorInt;
+        return mSensorInt;
     }
 
     public float[] getValues() {
-        return values.clone();
+        return mValues.clone();
     }
 
     public String getSaveString(int count) {
@@ -63,7 +51,7 @@ public class SensorMonitor implements SensorEventListener {
         DateFormat timeformat = DateFormat.getDateTimeInstance();
         String time = timeformat.format(now);
         String ret = count + "," + time + "\n";
-        for (float v : values)
+        for (float v : mValues)
             ret += count + "," + v + "\n";
         return ret;
     }

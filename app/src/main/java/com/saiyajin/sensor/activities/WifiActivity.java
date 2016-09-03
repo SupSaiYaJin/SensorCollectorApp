@@ -1,15 +1,5 @@
 package com.saiyajin.sensor.activities;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.Date;
-import java.util.List;
-import java.text.DateFormat;
-
-import android.app.ActionBar;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -30,7 +20,14 @@ import android.widget.Toast;
 
 import com.saiyajin.sensor.R;
 
-public class WifiActivity extends Activity {
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.List;
+
+public class WifiActivity extends AbsActivity {
     private WifiManager WM;
     private TextView wifi1;
     private TextView isWriting;
@@ -48,7 +45,7 @@ public class WifiActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         WM = (WifiManager) WifiActivity.this.getSystemService(WIFI_SERVICE);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.wifi);
+        setContentView(R.layout.wifi_activity);
 
         wifi1 = (TextView) findViewById(R.id.wifi1);
         isWriting = (TextView) findViewById(R.id.iswrite);

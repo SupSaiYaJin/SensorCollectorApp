@@ -1,10 +1,5 @@
 package com.saiyajin.sensor.activities;
 
-import com.saiyajin.sensor.R;
-import com.saiyajin.sensor.utils.DBHelper;
-
-import android.app.ActionBar;
-import android.app.Activity;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -21,7 +16,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MultiScanActivity extends Activity {
+import com.saiyajin.sensor.R;
+import com.saiyajin.sensor.utils.DBHelper;
+
+public class MultiScanActivity extends AbsActivity {
 
     private SensorManager SM;
     private CheckBox checkAcc;
@@ -50,7 +48,7 @@ public class MultiScanActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         SM = (SensorManager) this.getSystemService(SENSOR_SERVICE);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.multiscan);
+        setContentView(R.layout.multiscan_activity);
 
         checkAcc = (CheckBox) findViewById(R.id.chkacc);
         checkMag = (CheckBox) findViewById(R.id.chkmag);

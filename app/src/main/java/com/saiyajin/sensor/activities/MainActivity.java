@@ -7,7 +7,6 @@ import android.hardware.SensorManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
@@ -33,7 +32,7 @@ import com.saiyajin.sensor.view.BottomTabView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends FragmentActivity implements OnPageChangeListener, OnClickListener {
+public class MainActivity extends AbsActivity implements OnPageChangeListener, OnClickListener {
 
     private ViewPager mViewPager;
     private List<Fragment> mTabs = new ArrayList<>();
@@ -51,7 +50,7 @@ public class MainActivity extends FragmentActivity implements OnPageChangeListen
         initDatas();
 
         mViewPager.setAdapter(mAdapter);
-        mViewPager.setOnPageChangeListener(this);
+        mViewPager.addOnPageChangeListener(this);
     }
 
     private void initDatas() {
@@ -184,7 +183,7 @@ public class MainActivity extends FragmentActivity implements OnPageChangeListen
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
-            return inflater.inflate(R.layout.intro, container, false);
+            return inflater.inflate(R.layout.intro_fragment, container, false);
         }
     }
 
@@ -192,7 +191,7 @@ public class MainActivity extends FragmentActivity implements OnPageChangeListen
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
-            return inflater.inflate(R.layout.info, container, false);
+            return inflater.inflate(R.layout.info_fragment, container, false);
         }
 
         @SuppressWarnings("deprecation")
@@ -264,13 +263,13 @@ public class MainActivity extends FragmentActivity implements OnPageChangeListen
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
-            return inflater.inflate(R.layout.sensor, container, false);
+            return inflater.inflate(R.layout.sensor_fragment, container, false);
         }
 
         @Override
         public void onActivityCreated(Bundle savedInstanceState) {
             ListView sensorlist = (ListView) getActivity().findViewById(R.id.sensorlistview);
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.sensors, android.R.layout.simple_list_item_1);
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.sensors_array, android.R.layout.simple_list_item_1);
             sensorlist.setAdapter(adapter);
             sensorlist.setOnItemClickListener(new OnItemClickListener() {
                 @Override
@@ -290,36 +289,37 @@ public class MainActivity extends FragmentActivity implements OnPageChangeListen
                             intent.putExtra("SensorType", SensorsEnum.Magnetic);
                             break;
                         case 3:
-                            intent.putExtra("SensorType", SensorsEnum.Temperature);
+                            intent.putExtra("SensorType", SensorsEnum.FixedMagnetic);
                             break;
                         case 4:
-                            intent.putExtra("SensorType", SensorsEnum.Light);
+                            intent.putExtra("SensorType", SensorsEnum.Temperature);
                             break;
                         case 5:
-                            intent.putExtra("SensorType", SensorsEnum.Gyroscope);
+                            intent.putExtra("SensorType", SensorsEnum.Light);
                             break;
                         case 6:
-                            intent.putExtra("SensorType", SensorsEnum.Pressure);
+                            intent.putExtra("SensorType", SensorsEnum.Gyroscope);
                             break;
                         case 7:
-                            intent.putExtra("SensorType", SensorsEnum.Proximity);
+                            intent.putExtra("SensorType", SensorsEnum.Pressure);
                             break;
                         case 8:
-                            intent.setClass(getActivity(), WifiActivity.class);
+                            intent.putExtra("SensorType", SensorsEnum.Proximity);
                             break;
                         case 9:
-                            intent.putExtra("SensorType", SensorsEnum.Gravity);
+                            intent.setClass(getActivity(), WifiActivity.class);
                             break;
                         case 10:
-                            intent.putExtra("SensorType", SensorsEnum.LinearA);
+                            intent.putExtra("SensorType", SensorsEnum.Gravity);
                             break;
                         case 11:
-                            intent.putExtra("SensorType", SensorsEnum.Rotation);
+                            intent.putExtra("SensorType", SensorsEnum.LinearA);
                             break;
                         case 12:
-                            intent.setClass(getActivity(), MultiScanActivity.class);
-                        default:
+                            intent.putExtra("SensorType", SensorsEnum.Rotation);
                             break;
+                        case 13:
+                            intent.setClass(getActivity(), MultiScanActivity.class);
                     }
                     getActivity().startActivity(intent);
                 }
