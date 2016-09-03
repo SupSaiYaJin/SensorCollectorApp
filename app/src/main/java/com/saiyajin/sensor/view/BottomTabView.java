@@ -18,8 +18,7 @@ import com.saiyajin.sensor.R;
 /**
  * 主页底部图标View
  */
-public class BottomTabView extends View
-{
+public class BottomTabView extends View {
     /** 遮罩Bitmap */
     private Bitmap mBitmap;
     /** 遮罩Paint */
@@ -43,18 +42,14 @@ public class BottomTabView extends View
     /** 底部文本的绘制范围 */
     private Rect mTextBound = new Rect();
 
-    public BottomTabView(Context context)
-    {
+    public BottomTabView(Context context) {
         super(context);
     }
 
     /**
      * 初始化自定义属性值
-     * @param context 上下文
-     * @param attrs 属性
      */
-    public BottomTabView(Context context, AttributeSet attrs)
-    {
+    public BottomTabView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         // 获取设置的图标
@@ -89,8 +84,7 @@ public class BottomTabView extends View
     }
 
     @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec)
-    {
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
         // 得到绘制icon的宽
@@ -106,8 +100,7 @@ public class BottomTabView extends View
     }
 
     @Override
-    protected void onDraw(Canvas canvas)
-    {
+    protected void onDraw(Canvas canvas) {
         //转化透明度
         int alpha = (int) Math.ceil((255 * mAlpha));
 
@@ -117,8 +110,7 @@ public class BottomTabView extends View
 
     }
 
-    private void setupTargetBitmap(Canvas canvas, int alpha)
-    {
+    private void setupTargetBitmap(Canvas canvas, int alpha) {
         //绘制原始图标
         canvas.drawBitmap(mIconBitmap, null, mIconRect, null);
 
@@ -131,8 +123,7 @@ public class BottomTabView extends View
         canvas.drawBitmap(mBitmap, null, mIconRect, mPaint);
     }
 
-    private void drawSourceText(Canvas canvas, int alpha)
-    {
+    private void drawSourceText(Canvas canvas, int alpha) {
         mTextPaint.setTextSize(mTextSize);
         mTextPaint.setColor(0xff6C7578);
         mTextPaint.setAlpha(255 - alpha);
@@ -141,8 +132,7 @@ public class BottomTabView extends View
                 mIconRect.bottom + mTextBound.height(), mTextPaint);
     }
 
-    private void drawTargetText(Canvas canvas, int alpha)
-    {
+    private void drawTargetText(Canvas canvas, int alpha) {
         mTextPaint.setColor(mColor);
         mTextPaint.setAlpha(alpha);
         canvas.drawText(mText, mIconRect.left + mIconRect.width() / 2
@@ -150,8 +140,7 @@ public class BottomTabView extends View
                 mIconRect.bottom + mTextBound.height(), mTextPaint);
     }
 
-    public void setIconAlpha(float alpha)
-    {
+    public void setIconAlpha(float alpha) {
         this.mAlpha = alpha;
         invalidate();
     }

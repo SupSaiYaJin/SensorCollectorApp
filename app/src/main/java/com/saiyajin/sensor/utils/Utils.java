@@ -8,17 +8,15 @@ import java.io.IOException;
 import android.os.Environment;
 
 public class Utils {
-	public static void saveFile(String str, String fileName) {
-		FileOutputStream fileOutputStream = null;
-		File file = new File(Environment.getExternalStorageDirectory(), fileName);
-		try {
-			fileOutputStream = new FileOutputStream(file, true);
-			fileOutputStream.write(str.getBytes());
-			fileOutputStream.close();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
+    public static void saveFile(String str, String fileName) {
+        FileOutputStream fileOutputStream;
+        File file = new File(Environment.getExternalStorageDirectory(), fileName);
+        try {
+            fileOutputStream = new FileOutputStream(file, true);
+            fileOutputStream.write(str.getBytes());
+            fileOutputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

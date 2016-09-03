@@ -19,13 +19,14 @@ public class OrientMonitor extends SensorMonitor {
     private ImageView imageView;
     float[] avalues;
     float[] mvalues;
-    OrientMonitor(int SensorInt, String[] description, Activity activity){
+
+    OrientMonitor(int SensorInt, String[] description, Activity activity) {
         super(SensorInt, description, activity);
         avalues = new float[3];
         mvalues = new float[3];
         imageView = new ImageView(activity);
         imageView.setImageResource(R.drawable.compass);
-        LinearLayout layout = (LinearLayout)activity.findViewById(R.id.monitorlayout);
+        LinearLayout layout = (LinearLayout) activity.findViewById(R.id.monitorlayout);
         layout.addView(imageView);
     }
 
@@ -48,9 +49,9 @@ public class OrientMonitor extends SensorMonitor {
         float[] r = new float[9];
         if (SensorManager.getRotationMatrix(r, null, avalues, mvalues)) {
             SensorManager.getOrientation(r, values);
-            values[0]=(float)Math.toDegrees(values[0]);
-            values[1]=(float)Math.toDegrees(values[1]);
-            values[2]=(float)Math.toDegrees(values[2]);
+            values[0] = (float) Math.toDegrees(values[0]);
+            values[1] = (float) Math.toDegrees(values[1]);
+            values[2] = (float) Math.toDegrees(values[2]);
         }
         show();
     }

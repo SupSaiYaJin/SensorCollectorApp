@@ -8,7 +8,7 @@ import android.hardware.SensorManager;
 /**
  * Created by SaiYa on 15/12/3.
  */
-public class MagneticMonitor extends SensorMonitor{
+public class MagneticMonitor extends SensorMonitor {
 
     private float[] avalues;
     private float[] mvalues;
