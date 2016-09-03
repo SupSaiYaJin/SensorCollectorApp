@@ -202,71 +202,71 @@ public class MonitorActivity extends AbsActivity {
         switch (type) {
             case Accelerometer:
                 description = new String[3];
-                description[0] = "x方向上加速度为(m/s2)：";
-                description[1] = "y方向上加速度为(m/s2)：";
-                description[2] = "z方向上加速度为(m/s2)：";
+                description[0] = "x加速度(m/s2)：";
+                description[1] = "y加速度(m/s2)：";
+                description[2] = "z加速度(m/s2)：";
                 sensorType = Sensor.TYPE_ACCELEROMETER;
                 break;
             case Gravity:
                 description = new String[3];
-                description[0] = "x方向上重力加速度为(m/s2)：";
-                description[1] = "y方向上重力加速度为(m/s2)：";
-                description[2] = "z方向上重力加速度为(m/s2)：";
+                description[0] = "x重力加速度(m/s2)：";
+                description[1] = "y重力加速度(m/s2)：";
+                description[2] = "z重力加速度(m/s2)：";
                 sensorType = Sensor.TYPE_GRAVITY;
                 break;
             case Gyroscope:
                 description = new String[3];
-                description[0] = "x方向的角速度为(rad/s)：";
-                description[1] = "y方向的角速度为(rad/s)：";
-                description[2] = "z方向的角速度为(rad/s)：";
+                description[0] = "x角速度(rad/s)：";
+                description[1] = "y角速度(rad/s)：";
+                description[2] = "z角速度(rad/s)：";
                 sensorType = Sensor.TYPE_GYROSCOPE;
                 break;
             case Light:
                 description = new String[1];
-                description[0] = "光的强度为(lux)：";
+                description[0] = "光的强度(lux)：";
                 sensorType = Sensor.TYPE_LIGHT;
                 break;
             case LinearA:
                 description = new String[3];
-                description[0] = "x方向上线性加速度为(m/s2)：";
-                description[1] = "y方向上线性加速度为(m/s2)：";
-                description[2] = "z方向上线性加速度为(m/s2)：";
+                description[0] = "x线性加速度(m/s2)：";
+                description[1] = "y线性加速度(m/s2)：";
+                description[2] = "z线性加速度(m/s2)：";
                 sensorType = Sensor.TYPE_LINEAR_ACCELERATION;
                 break;
             case Pressure:
                 description = new String[1];
-                description[0] = "当前的压强为(hPa)：";
+                description[0] = "压强(hPa)：";
                 sensorType = Sensor.TYPE_PRESSURE;
                 break;
             case Proximity:
                 description = new String[1];
-                description[0] = "对象与手机的距离:";
+                description[0] = "距离:";
                 sensorType = Sensor.TYPE_PROXIMITY;
                 break;
             case Rotation:
                 description = new String[3];
-                description[0] = "x方向的旋转矢量为：";
-                description[1] = "y方向的旋转矢量为：";
-                description[2] = "z方向的旋转矢量为：";
+                description[0] = "x旋转矢量：";
+                description[1] = "y旋转矢量：";
+                description[2] = "z旋转矢量：";
                 sensorType = Sensor.TYPE_ROTATION_VECTOR;
                 break;
             case Temperature:
                 description = new String[1];
-                description[0] = "当前的温度为(°C)：";
+                description[0] = "温度(°C)：";
                 sensorType = Sensor.TYPE_AMBIENT_TEMPERATURE;
                 break;
             case Magnetic:
                 description = new String[3];
-                description[0] = "终端x方向的磁场分量为(uT)：";
-                description[1] = "终端y方向的磁场分量为(uT)：";
-                description[2] = "终端z方向的磁场分量为(uT)：";
+                description[0] = "x方向磁场分量(uT)：";
+                description[1] = "y方向磁场分量(uT)：";
+                description[2] = "z方向磁场分量(uT)：";
                 sensorType = Sensor.TYPE_MAGNETIC_FIELD;
                 break;
             case FixedMagnetic:
                 description = new String[3];
-                description[0] = "大地x方向的磁场分量为(uT)：";
-                description[1] = "大地y方向的磁场分量为(uT)：";
-                description[2] = "大地z方向的磁场分量为(uT)：";
+                description[0] = "x方向磁场分量(uT)：";
+                description[1] = "y方向磁场分量(uT)：";
+                description[2] = "z方向磁场分量(uT)：";
                 sensorType = SensorMonitor.FIXEDMAGNETIC;
                 break;
             case Orient:
