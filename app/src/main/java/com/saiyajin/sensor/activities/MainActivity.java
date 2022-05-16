@@ -6,10 +6,6 @@ import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -32,7 +28,11 @@ import com.saiyajin.sensor.view.BottomTabView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AbsActivity implements OnPageChangeListener, OnClickListener {
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
+public class MainActivity extends AbsActivity implements ViewPager.OnPageChangeListener, OnClickListener {
 
     private ViewPager mViewPager;
     private List<Fragment> mTabs = new ArrayList<>();
