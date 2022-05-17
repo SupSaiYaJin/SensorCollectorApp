@@ -211,7 +211,7 @@ public class MainActivity extends AbsActivity implements ViewPager.OnPageChangeL
                 s = allSensors.get(i);
                 str = "设备名称：" + s.getName() + "\n供应商名称：" + s.getVendor()
                         + "\n最小数据间隔（微秒）：" + s.getMinDelay() + "\n分辨率："
-                        + s.getResolution() + "\n";
+                        + s.getResolution() + "\n原始类型：" + s.getStringType() + "\n";
                 switch (s.getType()) {
                     case Sensor.TYPE_ACCELEROMETER:
                         sl.append("\n加速度传感器\n" + str);
